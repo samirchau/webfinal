@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Samir Chaulagain</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <script src="product.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="row">
+          <img src="logo.png" class="logo" alt="logo" />
+          <ul class="main-nav" id="check-class">
+            <li><a href="honesty.html" class="hover">Honesty</a></li>
+            <li><a href="product.html" class="hover">Product</a></li>
+            <li><a href="reflection.html" class="hover">Reflection</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- form -->
+
+      <form id="form" onsubmit="submitForm();" action="https://httpbin.org/post" method="post">
+        <h1>Product-form</h1>
+         <!-- product id -->
+        <div class="data_input">
+          <label for="product_id">Product-id</label>
+          <input id="product_id" name="Product_id" type="number" maxlength="8" pattern = "[0-9]{1,8}" required/>
+          <div class="error"></div>
+        </div>
+         <!-- product description -->
+        <div class="data_input">
+          <label for="product_description">Product-description</label>
+          <textarea id="product_description" name="Product_description" required  type="text" pattern = "[A-zA-Z]{20}"></textarea>
+          <div class="error"></div>
+        </div>
+
+                 <!-- product price -->
+
+        <div class="data_input">
+          <label for="price">Price</label>
+          <input id="price" name="price" type="number" min="0" max = "1000" pattern="0-9"  required/>
+          <div class="error"></div>
+        </div>
+                 <!-- username -->
+
+        <div class="data_input">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" required/>
+          <div class="error"></div>
+        </div>
+
+                 <!-- supplier list -->
+
+                 <div>
+                  <input class="supplier_status" id="supplier_status_1" type="checkbox" name="supplier_status[]" value="New Supplier" />
+                  <label for="supplier_status_1">New Supplier</label>
+                </div>
+                <div>
+                  <input class="supplier_status" id="supplier_status_2" type="checkbox" name="supplier_status[]" value="Contract Signed" />
+                  <label for="supplier_status_2">Contract Signed</label>
+                </div>
+                <div>
+                  <input class="supplier_status" id="supplier_status_3" type="checkbox" name="supplier_status[]" value="Quality Tested" />
+                  <label for="supplier_status_3">Quality Tested</label>
+                </div>
+
+                 <!-- email -->
+
+        <div class="data_input">
+          <label for="email">Supplier Email</label>
+          <input id="email" name="email" type="email" placeholder="email" required/>
+          <div class="error"></div>
+        </div>
+
+          <!-- hidden -->
+        <input 
+        type="hidden" 
+        name="lastName" 
+        id="lastName" 
+        value="Chaulagain" 
+        />
+          <!-- hidden -->
+
+        <input
+          type="hidden"
+          name="studentId"
+          id="studentId"
+          value="109946160"
+        />
+
+                 <!-- submit -->
+
+                 <button type="submit" name="submit" value="Submit" > sign up</button>
+                 <!-- reset -->
+
+                 <input type="reset" name="reset" value="reset" />
+      </form>
+    </div>
+    <footer>
+      <p>
+        <a class="foo_link" href="https://github.com/samirchau"
+          >github.com/samirchau</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
